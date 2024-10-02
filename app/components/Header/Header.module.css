@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background-color: transparent;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+.headerList {
+  display: flex;
+  list-style: none;
+}
+.headerList a {
+  color: white;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease;
+}
+.headerList a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* #burger-icon {
+  color: white;
+  z-index: 1000;
+  cursor: pointer;
+  display: none;
+} */
+.burgerIcon {
+  width: 35px;
+  display: none;
+}
+
+@media screen and (max-width: 1535px) {
+  .header {
+    padding: 15px 3%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .burgerIcon {
+    display: block;
+  }
+  .headerList {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 100%;
+    height: 40vh;
+    background: rgb(50, 72, 117);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all 0.5s ease;
+  }
+  .headerBackground {
+    background-color: rgb(50, 72, 117);
+  }
+  .headerList a {
+    margin-left: 0;
+    display: block;
+    margin: 10px 0;
+  }
+  .headerList.open {
+    right: 0;
+  }
+}
