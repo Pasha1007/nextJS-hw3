@@ -1,27 +1,31 @@
 "use client";
 import styles from "./InfoSection.module.css";
-import ScrollReveal from "scrollreveal";
 import { useEffect } from "react";
+
 export default function InfoSection() {
   useEffect(() => {
-    const scrollR = ScrollReveal({
-      distance: "65px",
-      duration: 2600,
-      delay: 450,
-      reset: true,
-    });
+    // Check if window is defined (i.e., we're on the client side)
+    if (typeof window !== "undefined") {
+      const ScrollReveal = require("scrollreveal").default;
 
-    scrollR.reveal(`.${styles.infoTxt}`, { delay: 200, origin: "top" });
-    scrollR.reveal(`.${styles.infoImg}`, {
-      delay: 400,
-      origin: "right",
-    });
-    console.log("ScrollReveal instance created:", scrollR);
+      const scrollR = ScrollReveal({
+        distance: "65px",
+        duration: 2600,
+        delay: 450,
+        reset: true,
+      });
 
-    return () => {
-      scrollR.destroy();
-    };
-  });
+      scrollR.reveal(`.${styles.infoTxt}`, { delay: 200, origin: "top" });
+      scrollR.reveal(`.${styles.infoImg}`, {
+        delay: 400,
+        origin: "right",
+      });
+
+      return () => {
+        scrollR.destroy();
+      };
+    }
+  }, []);
 
   return (
     <section className={styles.infoCont}>

@@ -1,4 +1,3 @@
-// types/scrollreveal.d.ts
 declare module "scrollreveal" {
   interface ScrollRevealOptions {
     distance?: string;
