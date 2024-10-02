@@ -48,7 +48,7 @@
   margin-bottom: 40px;
 }
 
-.infoImg {
+.infoImgCont {
   width: 35vw;
   height: auto;
   display: flex;
@@ -89,7 +89,7 @@
 }
 
 @media screen and (max-width: 1340px) {
-  .infoImg img {
+  .infoImg {
     width: 100%;
     height: auto;
   }
@@ -110,11 +110,11 @@
     width: 100%;
     text-align: center;
   }
-  .infoImg {
+  .infoImgCont {
     width: 100%;
     text-align: center;
   }
-  .infoImg img {
+  .infoImg {
     width: 400px;
     height: auto;
   }
@@ -126,7 +126,7 @@
 }
 
 @media screen and (max-width: 680px) {
-  .infoImg img {
+  .infoImg {
     width: 50%;
     height: auto;
   }

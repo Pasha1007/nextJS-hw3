@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import styles from "./InfoSection.module.css";
 import { useEffect } from "react";
 
@@ -41,8 +42,14 @@ export default function InfoSection() {
           Compare
         </a>
       </div>
-      <div className={styles.infoImg}>
-        <img src="sprite.png" alt="sprite" />
+      <div className={styles.infoImgCont}>
+        <Image
+          className={styles.infoImg}
+          src="/sprite.png"
+          alt="sprite"
+          width={400}
+          height={600}
+        />
       </div>
     </section>
   );

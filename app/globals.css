@@ -7,10 +7,10 @@
 }
 @font-face {
   font-family: "Pacifico";
-  src: local("Pacifico"), url("fonts/pacifico-regular.ttf") format("truetype");
+  src: local("Pacifico"), url("/fonts/pacifico-regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Guerrilla";
   src: local("Guerrilla"),
-    url("fonts/protestguerrilla-regular.ttf") format("truetype");
+    url("/fonts/protestguerrilla-regular.ttf") format("truetype");
 }
