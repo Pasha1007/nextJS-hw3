@@ -4,7 +4,6 @@ import { useEffect } from "react";
 
 export default function InfoSection() {
   useEffect(() => {
-    // Check if window is defined (i.e., we're on the client side)
     if (typeof window !== "undefined") {
       const ScrollReveal = require("scrollreveal").default;
 

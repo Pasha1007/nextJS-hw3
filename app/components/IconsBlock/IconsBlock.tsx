@@ -4,9 +4,7 @@ import styles from "./IconsBlock.module.css";
 
 export default function IconsBlock() {
   useEffect(() => {
-    // Ensure we're in a client-side environment
     if (typeof window !== "undefined") {
-      // Dynamically import ScrollReveal to avoid SSR issues
       const ScrollReveal = require("scrollreveal").default;
 
       const scrollR = ScrollReveal({
