@@ -6,23 +6,23 @@ import Image from "next/image";
 export default function IconsBlock() {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const ScrollReveal = require("scrollreveal").default;
+      import("scrollreveal").then((ScrollReveal) => {
+        const scrollR = ScrollReveal.default({
+          distance: "65px",
+          duration: 2600,
+          delay: 450,
+          reset: true,
+        });
 
-      const scrollR = ScrollReveal({
-        distance: "65px",
-        duration: 2600,
-        delay: 450,
-        reset: true,
+        scrollR.reveal(`.${styles.icons}`, {
+          delay: 450,
+          origin: "left",
+        });
+
+        return () => {
+          scrollR.destroy();
+        };
       });
-
-      scrollR.reveal(`.${styles.icons}`, {
-        delay: 450,
-        origin: "left",
-      });
-
-      return () => {
-        scrollR.destroy();
-      };
     }
   }, []);
 

@@ -6,24 +6,21 @@ import { useEffect } from "react";
 export default function InfoSection() {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const ScrollReveal = require("scrollreveal").default;
+      import("scrollreveal").then((ScrollReveal) => {
+        const scrollR = ScrollReveal.default({
+          distance: "65px",
+          duration: 2600,
+          delay: 450,
+          reset: true,
+        });
 
-      const scrollR = ScrollReveal({
-        distance: "65px",
-        duration: 2600,
-        delay: 450,
-        reset: true,
+        scrollR.reveal(`.${styles.infoTxt}`, { delay: 200, origin: "top" });
+        scrollR.reveal(`.${styles.infoImg}`, { delay: 400, origin: "right" });
+
+        return () => {
+          scrollR.destroy();
+        };
       });
-
-      scrollR.reveal(`.${styles.infoTxt}`, { delay: 200, origin: "top" });
-      scrollR.reveal(`.${styles.infoImg}`, {
-        delay: 400,
-        origin: "right",
-      });
-
-      return () => {
-        scrollR.destroy();
-      };
     }
   }, []);
 
