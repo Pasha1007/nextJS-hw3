@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./InfoSection.module.css";
 import { useEffect } from "react";
+import Video from "../VideoBackground/Video";
 
 export default function InfoSection() {
   useEffect(() => {
@@ -26,6 +27,8 @@ export default function InfoSection() {
 
   return (
     <section className={styles.infoCont}>
+      <Video />
+      <div className={styles.overlay}></div>
       <div className={styles.infoTxt}>
         <p>#1 Product</p>
         <p>By Kramar Pavlo</p>
@@ -46,6 +49,7 @@ export default function InfoSection() {
           alt="sprite"
           width={400}
           height={600}
+          priority={true}
         />
       </div>
     </section>

@@ -46,7 +46,7 @@ export default function IconsBlock() {
       </a>
       <a href="#">
         <Image
-          src="/icons/nextJS-icon.svg"
+          src="/icons/nextJs-icon.svg"
           alt="Next.js Icon"
           width={30}
           height={30}

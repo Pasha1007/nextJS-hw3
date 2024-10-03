@@ -1,19 +1,14 @@
 .infoCont {
-  --primary-bg-color: rgb(50, 72, 117);
-  --secondary-bg-color: rgba(232, 45, 45, 1);
+  --primary-bg-color: rgb(0, 0, 0);
+  --secondary-bg-color: rgb(121, 121, 122);
   --text-color: white;
   --link-hover-border-color: red;
   --font-size-small: 14px;
-  --font-family-secondary: "Guerrilla";
 
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    0deg,
-    var(--primary-bg-color) 0%,
-    var(--secondary-bg-color) 100%
-  );
+
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -21,7 +16,15 @@
   gap: 2vw;
   padding: 0 19%;
 }
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.499);
+  z-index: -1;
+}
 .infoTxt p:nth-child(1) {
   font-size: var(--font-size-small);
   font-weight: 400;
@@ -29,7 +32,7 @@
   margin-bottom: 40px;
 }
 .infoTxt h1 {
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-guerrilla);
   font-size: 90px;
   font-weight: 400;
   color: var(--text-color);
@@ -55,6 +58,11 @@
   align-items: center;
   justify-content: center;
 }
+.infoImg {
+  width: auto;
+  height: auto;
+}
+
 .infoTxt {
   text-align: left;
 }
